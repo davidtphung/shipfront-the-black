@@ -40,7 +40,6 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -f build_type=workflow \
             || true
-      - uses: actions/configure-pages@v5
       - run: npm run build
         env:
           GITHUB_PAGES: "true"
