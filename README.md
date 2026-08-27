@@ -23,7 +23,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:43217](http://localhost:43217) if you start the server with `npm run dev -- --port 43217`, or the port Next prints.
+Open [http://localhost:43217](http://localhost:43217).
 
 ## GitHub Pages
 
@@ -32,14 +32,3 @@ Public site: [https://davidtphung.github.io/shipfront-the-black/](https://davidt
 ```bash
 GITHUB_PAGES=true NEXT_PUBLIC_BASE_PATH=/shipfront-the-black npm run build
 ```
-
-The static export is written to `out/`.
-
-## Stack
-
-- Next.js (App Router) and TypeScript
-- Tailwind CSS v4
-- shadcn/ui primitives
-- Space Grotesk
-- Motion for UI choreography
-- Accent `#FF6A00` on ground `#000`

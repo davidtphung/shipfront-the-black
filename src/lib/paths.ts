@@ -1,3 +1,4 @@
+/** Prefix for raw asset URLs. Do not use on next/link hrefs. Next.js basePath already prefixes those. */
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function withBase(path: string) {
