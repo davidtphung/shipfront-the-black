@@ -29,11 +29,11 @@ export function Hero() {
           >
             {hero.eyebrow}
           </motion.p>
-          <h1 className="mt-5 text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] text-paper sm:text-[56px] lg:text-[72px]">
-            <motion.span className="block overflow-hidden sm:whitespace-nowrap" {...enter(0.12)}>
+          <h1 className="mt-5 text-[40px] leading-[1.08] font-semibold tracking-[-0.05em] text-pretty text-paper sm:text-[56px] lg:text-[68px] [text-wrap:unset]">
+            <motion.span className="block" {...enter(0.12)}>
               {hero.headlineLine1}
             </motion.span>
-            <motion.span className="mt-1 block overflow-hidden lg:whitespace-nowrap" {...enter(0.22)}>
+            <motion.span className="mt-1 block" {...enter(0.22)}>
               {hero.headlineLine2}
             </motion.span>
           </h1>
@@ -56,7 +56,7 @@ export function Hero() {
         <motion.div {...enter(0.28)} className="flex flex-col items-center justify-center lg:pt-4">
           <CubeMark
             title="Shipfront cube"
-            className="h-[220px] w-[220px] sm:h-[280px] sm:w-[280px] lg:h-[320px] lg:w-[320px]"
+            className="h-[220px] w-[220px] sm:h-[280px] w-[280px] lg:h-[320px] lg:w-[320px]"
             strokeWidth={1.6}
           />
         </motion.div>
