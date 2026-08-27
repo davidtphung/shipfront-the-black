@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -32,6 +32,14 @@ jobs:
               curl -fsSL "$base/$f" -o "public/media/$f"
             fi
           done
+      - name: Enable GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages" \
+            -H "Accept: application/vnd.github+json" \
+            -f build_type=workflow \
+            || true
       - uses: actions/configure-pages@v5
       - run: npm run build
         env:
