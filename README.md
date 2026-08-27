@@ -29,6 +29,13 @@ Open [http://localhost:43217](http://localhost:43217) if you start the server wi
 
 Public site: [https://davidtphung.github.io/shipfront-the-black/](https://davidtphung.github.io/shipfront-the-black/)
 
+The static export is already published on the `gh-pages` branch. GitHub Actions cannot create a Pages site with `GITHUB_TOKEN`. Enable it once:
+
+1. Open [Settings → Pages](https://github.com/davidtphung/shipfront-the-black/settings/pages)
+2. Source: Deploy from a branch
+3. Branch: `gh-pages` / folder `/` (root)
+4. Save
+
 ```bash
 GITHUB_PAGES=true NEXT_PUBLIC_BASE_PATH=/shipfront-the-black npm run build
 ```
