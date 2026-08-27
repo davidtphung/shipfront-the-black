@@ -1,0 +1,53 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install
+      - name: Restore crate-os stills if missing
+        run: |
+          mkdir -p public/media
+          base="https://raw.githubusercontent.com/davidtphung/shipfront-crate-os/main/public/media"
+          for f in shelves.jpg parcels.jpg downtown-la.jpg route-nodes.jpg; do
+            if [ ! -s "public/media/$f" ]; then
+              curl -fsSL "$base/$f" -o "public/media/$f"
+            fi
+          done
+      - uses: actions/configure-pages@v5
+      - run: npm run build
+        env:
+          GITHUB_PAGES: "true"
+          NEXT_PUBLIC_BASE_PATH: /shipfront-the-black
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
