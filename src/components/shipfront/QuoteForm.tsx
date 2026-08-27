@@ -14,7 +14,7 @@ function validate(values: Values) {
   const errors: Values = {};
   if (!values.name?.trim()) errors.name = "Enter your name.";
   if (!values.email?.trim()) errors.email = "Enter your email.";
-  else if (!/[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) errors.email = "Enter a valid email.";
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) errors.email = "Enter a valid email.";
   if (!values.phone?.trim()) errors.phone = "Enter your phone number.";
   return errors;
 }
