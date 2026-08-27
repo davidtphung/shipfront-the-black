@@ -56,7 +56,7 @@ export function Hero() {
         <motion.div {...enter(0.28)} className="flex flex-col items-center justify-center lg:pt-4">
           <CubeMark
             title="Shipfront cube"
-            className="h-[220px] w-[220px] sm:h-[280px] w-[280px] lg:h-[320px] lg:w-[320px]"
+            className="h-[220px] w-[220px] sm:h-[280px] sm:w-[280px] lg:h-[320px] lg:w-[320px]"
             strokeWidth={1.6}
           />
         </motion.div>
