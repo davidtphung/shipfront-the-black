@@ -8,7 +8,6 @@ import { Logo } from "@/components/mark/Logo";
 import { Button } from "@/components/ui/button";
 import { useFocusTrap } from "@/hooks/useFocusTrap";
 import { navLinks, primaryCta } from "@/data/navigation";
-import { withBase } from "@/lib/paths";
 import { cn } from "@/lib/cn";
 
 export function Navbar() {
@@ -55,7 +54,7 @@ export function Navbar() {
           )}
         >
           <Link
-            href={withBase("/")}
+            href="/"
             className="flex min-h-11 items-center rounded-[10px] px-1"
             aria-label="Shipfront home"
           >
@@ -71,7 +70,7 @@ export function Navbar() {
               return (
                 <Link
                   key={link.href}
-                  href={withBase(link.href)}
+                  href={link.href}
                   className={cn(
                     "rounded-[10px] px-3 py-2 text-[14px] font-medium text-muted transition-colors hover:text-paper",
                     active && "text-paper",
@@ -126,7 +125,7 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                href={withBase(link.href)}
+                href={link.href}
                 className="rounded-[14px] px-2 py-3 text-[28px] font-semibold tracking-[-0.03em] text-paper"
                 onClick={() => setOpen(false)}
               >
