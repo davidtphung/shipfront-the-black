@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
   <rect width="80" height="80" fill="#000000"/>
-  <polygon points="40,14 62,27 40,40 18,27" fill="#000000"/>
-  <polygon points="18,27 40,40 40,66 18,53" fill="#000000"/>
-  <polygon points="62,27 40,40 40,66 62,53" fill="#000000"/>
+  <polygon points="40,9.538 66.38,24.769 40,40 13.62,24.769" fill="#000000"/>
+  <polygon points="13.62,24.769 40,40 40,70.462 13.62,55.231" fill="#000000"/>
+  <polygon points="66.38,24.769 66.38,55.231 40,70.462 40,40" fill="#000000"/>
   <g fill="none" stroke="#FF6A00" stroke-width="1.75" stroke-linejoin="miter" stroke-linecap="square">
-    <polyline points="40,14 62,27 40,40 18,27 40,14"/>
-    <polyline points="18,27 18,53 40,66 62,53 62,27"/>
-    <line x1="40" y1="40" x2="40" y2="66"/>
-    <line x1="40" y1="40" x2="18" y2="27"/>
-    <line x1="40" y1="40" x2="62" y2="27"/>
+    <polyline points="40,9.538 66.38,24.769 40,40 13.62,24.769 40,9.538"/>
+    <polyline points="13.62,24.769 13.62,55.231 40,70.462 66.38,55.231 66.38,24.769"/>
+    <line x1="40" y1="40" x2="40" y2="70.462"/>
+    <line x1="40" y1="40" x2="13.62" y2="24.769"/>
+    <line x1="40" y1="40" x2="66.38" y2="24.769"/>
   </g>
 </svg>
